@@ -9,8 +9,6 @@ desktop.ini
 .env.*
 !.env.example
 
-# Local preview server
-server.mjs
 
 # Dependencies
 node_modules/

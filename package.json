@@ -1,8 +1,21 @@
 {
   "name": "nk-salon",
   "version": "1.0.0",
-  "private": true,
+  "description": "Premium Website for NK Salon — Raiwind, Pakistan",
+  "main": "server.mjs",
+  "type": "module",
   "scripts": {
-    "build": "node build.js"
-  }
+    "build": "node build.js",
+    "start": "node server.mjs",
+    "dev": "node server.mjs"
+  },
+  "keywords": [
+    "salon",
+    "hair-salon",
+    "barbershop",
+    "raiwind",
+    "pakistan"
+  ],
+  "author": "NK Salon",
+  "license": "UNLICENSED"
 }

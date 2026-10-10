@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'node:fs';
+import path from 'node:path';
 
 function copyDir(src, dest) {
   if (!fs.existsSync(src)) return;
@@ -16,7 +16,7 @@ function copyDir(src, dest) {
   }
 }
 
-function buildTarget(targetDir) {
+function syncStaticTo(targetDir) {
   fs.mkdirSync(targetDir, { recursive: true });
 
   const rootFiles = ['index.html', '404.html'];
@@ -32,5 +32,24 @@ function buildTarget(targetDir) {
   }
 }
 
-['public', 'dist', 'build'].forEach(buildTarget);
-console.log('Build completed: synchronized public/, dist/, and build/ directories.');
+// 1. Sync standard target folders
+['public', 'dist', 'build'].forEach(syncStaticTo);
+
+// 2. Sync Vercel Build Output API v3
+const vercelStatic = path.join('.vercel', 'output', 'static');
+syncStaticTo(vercelStatic);
+
+const vercelConfig = {
+  version: 3,
+  routes: [
+    { handle: 'filesystem' },
+    { src: '/(.*)', dest: '/index.html' }
+  ]
+};
+
+fs.writeFileSync(
+  path.join('.vercel', 'output', 'config.json'),
+  JSON.stringify(vercelConfig, null, 2)
+);
+
+console.log('Build completed: synchronized public, dist, build, and .vercel/output.');
