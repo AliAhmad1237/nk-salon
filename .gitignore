@@ -11,3 +11,7 @@ desktop.ini
 
 # Local preview server
 server.mjs
+
+# Build output
+dist/
+node_modules/
