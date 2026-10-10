@@ -9,7 +9,7 @@ desktop.ini
 .env.*
 !.env.example
 
-# Vercel and Build Artifacts
-.vercel
-node_modules
-.system_generated/
+# Local preview server
+server.mjs
+package.json
+package-lock.json
