@@ -1,0 +1,15 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment and Logs
+*.log
+.env
+.env.*
+!.env.example
+
+# Vercel and Build Artifacts
+.vercel
+node_modules
+.system_generated/
