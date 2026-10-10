@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | NK Salon Raiwind</title>
+  <meta name="description" content="The page you are looking for could not be found. Return to NK Salon Raiwind.">
+  <meta name="robots" content="noindex, follow">
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between;">
+  <header class="site-header scrolled">
+    <div class="container header-container">
+      <a href="index.html" class="brand-wordmark" aria-label="NK Salon — Home">
+        <span class="brand-title">NK SALON</span>
+        <span class="brand-location">MEN'S GROOMING · RAIWIND</span>
+      </a>
+      <div class="header-actions">
+        <a href="index.html#contact" class="btn btn-primary">Book an Appointment</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="section" style="padding-top: 160px; padding-bottom: 120px; flex: 1; display: flex; align-items: center;">
+    <div class="container" style="text-align: center; max-width: 640px; margin: 0 auto;">
+      <span class="eyebrow">ERROR 404</span>
+      <h1 class="section-title" style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 1rem;">Page Not Found</h1>
+      <p class="section-subtitle" style="margin: 0 auto 2.5rem auto;">
+        The requested page does not exist or may have been relocated. You can return to our homepage or get in touch directly.
+      </p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="index.html" class="btn btn-primary">Return to Homepage</a>
+        <a href="tel:+923434121421" class="btn btn-outline-dark">Call the Salon</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" style="padding-top: 40px; padding-bottom: 40px;">
+    <div class="container">
+      <div class="footer-bottom" style="padding-top: 0; border-top: none;">
+        <div class="footer-copy">
+          © <span id="current-year">2026</span> NK Salon. Tipu Market, Raiwind, Pakistan.
+        </div>
+        <div class="footer-disclaimer-note">
+          <a href="index.html" style="color: var(--taupe); text-decoration: underline;">Back to NK Salon</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

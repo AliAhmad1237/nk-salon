@@ -1,19 +1,40 @@
-import fs from 'node:fs';
-import path from 'node:path';
+import fs from 'fs';
+import path from 'path';
 
-fs.rmSync('dist', { recursive: true, force: true });
-fs.mkdirSync('dist', { recursive: true });
-
-['index.html', '404.html'].forEach(file => {
-  if (fs.existsSync(file)) {
-    fs.copyFileSync(file, path.join('dist', file));
+function copyDir(src, dest) {
+  if (!fs.existsSync(src)) return;
+  fs.mkdirSync(dest, { recursive: true });
+  const entries = fs.readdirSync(src, { withFileTypes: true });
+  for (const entry of entries) {
+    const srcPath = path.join(src, entry.name);
+    const destPath = path.join(dest, entry.name);
+    if (entry.isDirectory()) {
+      copyDir(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
   }
-});
+}
 
-['css', 'js', 'assets'].forEach(dir => {
-  if (fs.existsSync(dir)) {
-    fs.cpSync(dir, path.join('dist', dir), { recursive: true });
+function buildDirectory(targetDir) {
+  fs.rmSync(targetDir, { recursive: true, force: true });
+  fs.mkdirSync(targetDir, { recursive: true });
+
+  const rootFiles = ['index.html', '404.html'];
+  for (const file of rootFiles) {
+    if (fs.existsSync(file)) {
+      fs.copyFileSync(file, path.join(targetDir, file));
+    }
   }
-});
 
-console.log('Build complete: static files copied to dist/');
+  const assetDirs = ['css', 'js', 'assets'];
+  for (const dir of assetDirs) {
+    copyDir(dir, path.join(targetDir, dir));
+  }
+  console.log(`Successfully synced static files into ${targetDir}/`);
+}
+
+// Populate both public/ and dist/ so Vercel succeeds regardless of configured output directory
+buildDirectory('public');
+buildDirectory('dist');
+console.log('Build complete.');
