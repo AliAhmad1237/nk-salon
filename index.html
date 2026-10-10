@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <base href="/">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NK Salon | Men's Hair Salon & Barber in Raiwind, Pakistan</title>
@@ -10,11 +9,14 @@
   <meta name="author" content="NK Salon">
   <meta name="robots" content="index, follow">
 
+  <!-- Preload Critical LCP Hero Image -->
+  <link rel="preload" as="image" href="assets/images/hero-salon.webp" type="image/webp" fetchpriority="high">
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="business.business">
   <meta property="og:title" content="NK Salon | Men's Hair Salon & Barber in Raiwind, Pakistan">
   <meta property="og:description" content="Discover NK Salon in Raiwind, Pakistan. Premium men's haircuts, beard grooming, hot towel shaves, and personal care.">
-  <meta property="og:image" content="https://nk-salon-one.vercel.app/assets/images/og-image.jpg?v=3">
+  <meta property="og:image" content="https://nk-salon-one.vercel.app/assets/images/og-image.jpg?v=5">
   <meta property="og:url" content="https://nksalon.pk/">
 
   <!-- Twitter Card -->
@@ -24,7 +26,7 @@
   <meta name="twitter:image" content="assets/images/og-image.jpg">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg?v=3">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=5">
 
   <!-- Google Fonts: Cormorant Garamond & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,7 +34,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="/css/style.css?v=4">
+  <link rel="stylesheet" href="css/style.css?v=5">
 
   <!-- JSON-LD Structured Data (Verified Business Details Only) -->
   <script type="application/ld+json">
@@ -129,7 +131,10 @@
          ====================================================================== -->
     <section id="hero" class="hero-section" aria-label="Welcome to NK Salon">
       <div class="hero-background">
-        <img src="/assets/images/hero-salon.jpg?v=3" decoding="async" alt="Interior view of NK Salon gentlemen barbershop chairs and warm lighting" class="hero-bg-img" fetchpriority="high" loading="eager">
+        <picture>
+          <source srcset="assets/images/hero-salon.webp" type="image/webp">
+          <img src="assets/images/hero-salon.jpg" width="1376" height="768" decoding="async" alt="Interior view of NK Salon gentlemen barbershop chairs and warm lighting" class="hero-bg-img" fetchpriority="high" loading="eager">
+        </picture>
         <div class="hero-overlay"></div>
       </div>
 
@@ -189,7 +194,10 @@
           <!-- Column 1: Salon Image with Opening Badge -->
           <div class="about-image-column">
             <div class="about-image-wrapper">
-              <img src="/assets/images/about-salon.jpg?v=3" decoding="async" alt="Interior view of NK Salon gentlemen leather barber chairs and styling station" class="about-image" loading="lazy">
+              <picture>
+                <source srcset="assets/images/about-salon.webp" type="image/webp">
+                <img src="assets/images/about-salon.jpg" width="1200" height="896" decoding="async" alt="Interior view of NK Salon gentlemen leather barber chairs and styling station" class="about-image" loading="lazy">
+              </picture>
               <div class="about-badge">
                 <span class="about-badge-time">Opens at 12 PM</span>
                 <span class="about-badge-label">Tipu Market, Raiwind</span>
@@ -397,7 +405,10 @@
         <div class="gallery-grid" id="gallery-grid">
           <!-- Item 1: Male Barbershop Interior -->
           <figure class="gallery-item" data-category="interior" tabindex="0" role="button" aria-label="View Gentlemen's Barbershop Interior in lightbox">
-            <img src="/assets/images/gallery-male-interior.jpg?v=3" decoding="async" alt="Luxury men's barbershop interior with vintage leather barber chairs and warm backlight mirrors" class="gallery-img" loading="lazy">
+            <picture>
+              <source srcset="assets/images/gallery-male-interior.webp" type="image/webp">
+              <img src="assets/images/gallery-male-interior.jpg" width="1200" height="896" decoding="async" alt="Luxury men's barbershop interior with vintage leather barber chairs and warm backlight mirrors" class="gallery-img" loading="lazy">
+            </picture>
             <figcaption class="gallery-overlay">
               <span class="gallery-category-badge">Salon Interior</span>
               <span class="gallery-caption">Gentlemen's Barbershop Lounge</span>
@@ -406,7 +417,10 @@
 
           <!-- Item 2: Master Barber Scissor & Fade -->
           <figure class="gallery-item" data-category="styling" tabindex="0" role="button" aria-label="View Master Barber Haircut & Fade in lightbox">
-            <img src="/assets/images/gallery-minimal-styling.jpg?v=3" decoding="async" alt="Master barber crafting sharp clean hairline and precision fade styling on male client" class="gallery-img" loading="lazy">
+            <picture>
+              <source srcset="assets/images/gallery-minimal-styling.webp" type="image/webp">
+              <img src="assets/images/gallery-minimal-styling.jpg" width="1200" height="896" decoding="async" alt="Master barber crafting sharp clean hairline and precision fade styling on male client" class="gallery-img" loading="lazy">
+            </picture>
             <figcaption class="gallery-overlay">
               <span class="gallery-category-badge">Hair Styling</span>
               <span class="gallery-caption">Precision Fade & Scissor Detailing</span>
@@ -415,7 +429,10 @@
 
           <!-- Item 3: Traditional Hot Towel Razor Shave -->
           <figure class="gallery-item" data-category="grooming" tabindex="0" role="button" aria-label="View Traditional Hot Towel Razor Shave in lightbox">
-            <img src="/assets/images/gallery-male-shave.jpg?v=3" decoding="async" alt="Master barber performing traditional straight razor hot shave and beard contouring on gentleman" class="gallery-img" loading="lazy">
+            <picture>
+              <source srcset="assets/images/gallery-male-shave.webp" type="image/webp">
+              <img src="assets/images/gallery-male-shave.jpg" width="1200" height="896" decoding="async" alt="Master barber performing traditional straight razor hot shave and beard contouring on gentleman" class="gallery-img" loading="lazy">
+            </picture>
             <figcaption class="gallery-overlay">
               <span class="gallery-category-badge">Beard & Shave</span>
               <span class="gallery-caption">Traditional Hot Towel Razor Shave</span>
@@ -424,7 +441,10 @@
 
           <!-- Item 4: Men's Scalp Wash & Therapy -->
           <figure class="gallery-item" data-category="care" tabindex="0" role="button" aria-label="View Men's Scalp Therapy & Wash in lightbox">
-            <img src="/assets/images/gallery-male-care.jpg?v=3" decoding="async" alt="Male client receiving relaxing hair wash and scalp massage in dark ceramic basin" class="gallery-img" loading="lazy">
+            <picture>
+              <source srcset="assets/images/gallery-male-care.webp" type="image/webp">
+              <img src="assets/images/gallery-male-care.jpg" width="1200" height="896" decoding="async" alt="Male client receiving relaxing hair wash and scalp massage in dark ceramic basin" class="gallery-img" loading="lazy">
+            </picture>
             <figcaption class="gallery-overlay">
               <span class="gallery-category-badge">Hair & Skin Care</span>
               <span class="gallery-caption">Scalp Therapy & Hair Wash</span>
@@ -433,7 +453,10 @@
 
           <!-- Item 5: Steaming Facial & Skin Refresh -->
           <figure class="gallery-item" data-category="care" tabindex="0" role="button" aria-label="View Steaming Hot Towel Facial Refresh in lightbox">
-            <img src="/assets/images/gallery-male-facial.jpg?v=3" decoding="async" alt="Gentleman in barber chair relaxing under warm steaming towel facial treatment" class="gallery-img" loading="lazy">
+            <picture>
+              <source srcset="assets/images/gallery-male-facial.webp" type="image/webp">
+              <img src="assets/images/gallery-male-facial.jpg" width="1200" height="896" decoding="async" alt="Gentleman in barber chair relaxing under warm steaming towel facial treatment" class="gallery-img" loading="lazy">
+            </picture>
             <figcaption class="gallery-overlay">
               <span class="gallery-category-badge">Hair & Skin Care</span>
               <span class="gallery-caption">Steaming Hot Towel Facial Refresh</span>
@@ -442,7 +465,10 @@
 
           <!-- Item 6: Minimal Grooming Tools -->
           <figure class="gallery-item" data-category="grooming" tabindex="0" role="button" aria-label="View Handcrafted Wooden Comb & Shears in lightbox">
-            <img src="/assets/images/gallery-minimal-tools.jpg?v=3" decoding="async" alt="Artisanal wooden comb and precision matte black hair styling scissors on travertine" class="gallery-img" loading="lazy">
+            <picture>
+              <source srcset="assets/images/gallery-minimal-tools.webp" type="image/webp">
+              <img src="assets/images/gallery-minimal-tools.jpg" width="1200" height="896" decoding="async" alt="Artisanal wooden comb and precision matte black hair styling scissors on travertine" class="gallery-img" loading="lazy">
+            </picture>
             <figcaption class="gallery-overlay">
               <span class="gallery-category-badge">Beard & Shave</span>
               <span class="gallery-caption">Handcrafted Comb & Barber Shears</span>
@@ -451,7 +477,10 @@
 
           <!-- Item 7: Modern Textured Fade Finish -->
           <figure class="gallery-item" data-category="styling" tabindex="0" role="button" aria-label="View Modern Haircut Finish in lightbox">
-            <img src="/assets/images/gallery-styling-2.jpg?v=3" decoding="async" alt="Modern finished men's haircut texture and comb styling" class="gallery-img" loading="lazy">
+            <picture>
+              <source srcset="assets/images/gallery-styling-2.webp" type="image/webp">
+              <img src="assets/images/gallery-styling-2.jpg" width="1000" height="1500" decoding="async" alt="Modern finished men's haircut texture and comb styling" class="gallery-img" loading="lazy">
+            </picture>
             <figcaption class="gallery-overlay">
               <span class="gallery-category-badge">Hair Styling</span>
               <span class="gallery-caption">Modern Textured Scissor Finish</span>
@@ -460,7 +489,10 @@
 
           <!-- Item 8: Beard Sculpting -->
           <figure class="gallery-item" data-category="grooming" tabindex="0" role="button" aria-label="View Beard Sculpting in lightbox">
-            <img src="/assets/images/gallery-grooming-1.jpg?v=3" decoding="async" alt="Precision beard grooming and edge trimmer styling" class="gallery-img" loading="lazy">
+            <picture>
+              <source srcset="assets/images/gallery-grooming-1.webp" type="image/webp">
+              <img src="assets/images/gallery-grooming-1.jpg" width="1000" height="1498" decoding="async" alt="Precision beard grooming and edge trimmer styling" class="gallery-img" loading="lazy">
+            </picture>
             <figcaption class="gallery-overlay">
               <span class="gallery-category-badge">Beard & Shave</span>
               <span class="gallery-caption">Beard Sculpting & Clean Contouring</span>
@@ -936,6 +968,6 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="/js/main.js?v=3"></script>
+  <script src="js/main.js?v=5" defer></script>
 </body>
 </html>

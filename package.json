@@ -17,5 +17,8 @@
     "pakistan"
   ],
   "author": "NK Salon",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "sharp": "^0.35.5"
+  }
 }

@@ -42,6 +42,27 @@ syncStaticTo(vercelStatic);
 const vercelConfig = {
   version: 3,
   routes: [
+    {
+      src: '/assets/(.*)',
+      headers: {
+        'Cache-Control': 'public, max-age=31536000, immutable'
+      },
+      continue: true
+    },
+    {
+      src: '/css/(.*)',
+      headers: {
+        'Cache-Control': 'public, max-age=31536000, immutable'
+      },
+      continue: true
+    },
+    {
+      src: '/js/(.*)',
+      headers: {
+        'Cache-Control': 'public, max-age=31536000, immutable'
+      },
+      continue: true
+    },
     { handle: 'filesystem' },
     { src: '/(.*)', dest: '/index.html' }
   ]

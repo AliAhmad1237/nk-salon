@@ -477,6 +477,15 @@ ul, ol {
   width: 100%;
   max-width: 100%;
   height: 100%;
+  background-color: var(--charcoal-elevated);
+}
+
+.hero-background picture,
+.about-image-wrapper picture,
+.gallery-item picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-bg-img {
@@ -611,6 +620,7 @@ ul, ol {
   border-radius: var(--radius-xs);
   box-shadow: 0 12px 36px rgba(23, 23, 21, 0.08);
   border: 1px solid var(--border-light);
+  background-color: var(--charcoal-elevated);
 }
 
 .about-image {

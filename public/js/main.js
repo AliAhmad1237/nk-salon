@@ -486,7 +486,7 @@ function initLightbox() {
     const title = currentItem.querySelector('.gallery-caption')?.textContent || '';
     const category = currentItem.querySelector('.gallery-category-badge')?.textContent || '';
 
-    imgElement.src = img.src;
+    imgElement.src = img.currentSrc || img.src;
     imgElement.alt = img.alt;
     captionElement.textContent = title ? `${title} — ${category}` : category;
     counterElement.textContent = `${currentIndex + 1} / ${activeGalleryItems.length}`;
