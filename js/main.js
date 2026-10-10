@@ -617,7 +617,7 @@ function initAppointmentForm() {
     let text = `Hello NK Salon! I would like to enquire about an appointment:\n`;
     text += `• Name: ${name}\n`;
     text += `• Phone: ${phone}\n`;
-    text += `• Service: ${service || 'Haircuts & Styling'}\n`;
+    text += `• Service: ${service || "Men's Haircuts & Styling"}\n`;
     text += `• Date: ${formattedDate}\n`;
     text += `• Preferred Time: ${time || '12:00 PM - 02:00 PM'}\n`;
     if (message) {
@@ -632,7 +632,7 @@ function initAppointmentForm() {
       confirmDetailsDiv.innerHTML = `
         <div><strong>Name:</strong> ${escapeHtml(name)}</div>
         <div><strong>Contact:</strong> ${escapeHtml(phone)}</div>
-        <div><strong>Service:</strong> ${escapeHtml(service || 'Haircuts & Styling')}</div>
+        <div><strong>Service:</strong> ${escapeHtml(service || "Men's Haircuts & Styling")}</div>
         <div><strong>Requested Date:</strong> ${escapeHtml(formattedDate)}</div>
         <div><strong>Requested Time:</strong> ${escapeHtml(time || '12:00 PM - 02:00 PM')}</div>
         ${message ? `<div><strong>Notes:</strong> ${escapeHtml(message)}</div>` : ''}
