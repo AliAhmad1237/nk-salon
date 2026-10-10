@@ -1,5 +1,5 @@
-import fs from 'fs';
-import path from 'path';
+const fs = require('fs');
+const path = require('path');
 
 function copyDir(src, dest) {
   if (!fs.existsSync(src)) return;
@@ -16,8 +16,7 @@ function copyDir(src, dest) {
   }
 }
 
-function buildDirectory(targetDir) {
-  fs.rmSync(targetDir, { recursive: true, force: true });
+function buildTarget(targetDir) {
   fs.mkdirSync(targetDir, { recursive: true });
 
   const rootFiles = ['index.html', '404.html'];
@@ -31,10 +30,7 @@ function buildDirectory(targetDir) {
   for (const dir of assetDirs) {
     copyDir(dir, path.join(targetDir, dir));
   }
-  console.log(`Successfully synced static files into ${targetDir}/`);
 }
 
-// Populate both public/ and dist/ so Vercel succeeds regardless of configured output directory
-buildDirectory('public');
-buildDirectory('dist');
-console.log('Build complete.');
+['public', 'dist', 'build'].forEach(buildTarget);
+console.log('Build completed: synchronized public/, dist/, and build/ directories.');

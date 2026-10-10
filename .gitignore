@@ -12,6 +12,5 @@ desktop.ini
 # Local preview server
 server.mjs
 
-# Build output
-dist/
+# Dependencies
 node_modules/
