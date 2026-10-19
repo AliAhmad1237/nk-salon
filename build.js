@@ -64,6 +64,10 @@ const vercelConfig = {
       continue: true
     },
     { handle: 'filesystem' },
+    {
+      src: '/_vercel/(.*)',
+      dest: '/_vercel/$1'
+    },
     { src: '/(.*)', dest: '/index.html' }
   ]
 };
